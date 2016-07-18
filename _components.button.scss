@@ -1,0 +1,85 @@
+/*------------------------------------*\
+  #Button
+\*------------------------------------*/
+
+// Here we set variables assuming that them are not set
+// globally. If they have been previously been defined, the following variables
+// will be overriden and will be set to `true`.
+
+$wocss-settings-defaults: false !default;
+$wocss-settings-colors: false !default;
+$wocss-tools-bem-constructor: false !default;
+
+@if ($wocss-settings-defaults == false) {
+  @warn "Oops! Have you included the wocss-settings-defaults module?"
+};
+
+@if ($wocss-settings-colors == false) {
+  @warn "Oops! Have you included the wocss-settings-colors module?"
+};
+
+@if ($wocss-tools-bem-constructor == false) {
+  @warn "Oops! Have you included the wocss-tools-bem-constructor module?"
+};
+
+
+
+
+
+/**
+ * 1. Chrome Specific CSS to remove tap highlight color
+ * 6. Force all button-styled elements to appear clickable
+ * 2. Disable user-select on UI which Responds to Touch
+ * 3. Accessibility
+ * 4. Override element outline in focus state
+ * 5. Firefox specific CSS to remove button differences and focus ring
+ */
+
+@include component('button') {
+  -webkit-tap-highlight-color: $transparent; /* [1] */
+  appearance: none;
+  background: $default;
+  border-radius: $base-border-radius;
+  border: 0.125em solid $transparent;
+  color: $white;
+  cursor: pointer; /* [6] */
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  user-select: none; /* [2] */
+
+  &:hover {
+    box-shadow: inset 0 0 0 20em $darken-1;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 20em $darken-2, inset 0 0.188em 0.250em 0 $darken-3, 0 0 0.125em $darken-2;
+  }
+
+  &:focus {
+    border-color: $darken-2; /* [3] */
+    box-shadow: 0 0 0 0.188em $darken-3; /* [3] */
+    outline: 0; /* [4] */
+  }
+
+  &::-moz-focus-inner {
+    border: 0; /* [5] */
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  @include modifier('outline') {
+    background: $transparent;
+    border-color: currentColor;
+    border-width: 0.125em;
+  }
+
+  @include modifier('oval') {
+    border-radius: 15em;
+  }
+}

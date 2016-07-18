@@ -1,0 +1,28 @@
+{
+  "name": "wocss-components-button",
+  "version": "1.0.0",
+  "description": "wocss button component",
+  "main": "_components.button.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wocss/components.button.git"
+  },
+  "keywords": [
+    "bemit",
+    "css",
+    "itcss",
+    "sass",
+    "wocss"
+  ],
+  "author": "Gean Carlos <gean.marroquin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wocss/components.button/issues"
+  },
+  "homepage": "https://github.com/wocss/components.button#readme",
+  "dependencies": {
+    "wocss-settings-colors": "^1.0.1",
+    "wocss-settings-defaults": "^1.0.1",
+    "wocss-tools-bem-constructor": "^1.0.1"
+  }
+}
