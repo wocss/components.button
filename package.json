@@ -1,6 +1,6 @@
 {
   "name": "wocss-components-button",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "wocss button component",
   "main": "_components.button.scss",
   "repository": {
