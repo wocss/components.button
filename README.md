@@ -1,3 +1,6 @@
+> ## This module is DEPRECATED
+> See the [starter-kit](https://github.com/wocss/starter-kit)
+
 # Button
 
 > Component

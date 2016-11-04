@@ -1,7 +1,7 @@
 {
   "name": "wocss-components-button",
   "version": "1.0.2",
-  "description": "wocss button component",
+  "description": "[DEPRECATED] wocss button component",
   "main": "_components.button.scss",
   "repository": {
     "type": "git",
